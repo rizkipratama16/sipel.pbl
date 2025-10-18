@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Warga - SipeL</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #f4f6f9;
+      color: #333;
+    }
+
+    /* Header / Navbar */
+    header {
+      background-color: #0d47a1;
+      color: white;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h2 {
+      font-size: 22px;
+      letter-spacing: 0.5px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Konten utama */
+    .container {
+      padding: 30px 60px;
+    }
+
+    .section {
+      display: none;
+    }
+
+    .active {
+      display: block;
+    }
+
+    h3 {
+      color: #0d47a1;
+      margin-bottom: 15px;
+    }
+
+    .info-box {
+      background-color: #e3f2fd;
+      border-left: 5px solid #0d47a1;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    /* Kartu kandidat */
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      width: 280px;
+      text-align: center;
+      padding: 15px;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card img {
+      width: 120px;
+      height: 120px;
+      border-radius: 100%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .card h4 {
+      color: #0d47a1;
+      margin-bottom: 8px;
+    }
+
+    button {
+      background-color: #0d47a1;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 5px;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background-color: #1565c0;
+    }
+
+    /* Tabel hasil suara */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+      padding: 12px 15px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #0d47a1;
+      color: white;
+    }
+
+    footer {
+      background-color: #0d47a1;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h2>SipeL - Dashboard Warga</h2>
+    <nav>
+      <a href="#" onclick="showSection('beranda')">Beranda</a>
+      <a href="#" onclick="showSection('kandidat')">Daftar Kandidat</a>
+      <a href="#" onclick="showSection('hasil')">Hasil Suara</a>
+      <a href="#">Logout</a>
+    </nav>
+  </header>
+
+  <div class="container">
+
+    <!-- BERANDA -->
+    <div id="beranda" class="section active">
+      <h3>Selamat Datang, Warga Buana Jaya! 👋</h3>
+      <div class="info-box">
+        <p>Anda saat ini terdaftar dalam sistem e-voting SipeL.</p>
+        <p>Status: <b>Belum melakukan pemilihan</b></p>
+      </div>
+      <p>
+        Melalui dashboard ini Anda dapat melihat daftar calon RT/RW,
+        memilih kandidat pilihan Anda, dan memantau hasil suara secara real-time.
+      </p>
+    </div>
+
+    <!-- DAFTAR KANDIDAT -->
+    <div id="kandidat" class="section">
+      <h3>Daftar Calon RT 01</h3>
+      <div class="cards">
+        <div class="card">
+          <img src="https://via.placeholder.com/120" alt="Malio">
+          <h4>Malio</h4>
+          <p>Visi: Mewujudkan lingkungan RT yang aman dan kompak.</p>
+          <button>Pilih</button>
+        </div>
+
+        <div class="card">
+          <img src="https://via.placeholder.com/120" alt="Athala">
+          <h4>Athala</h4>
+          <p>Visi: Membangun semangat gotong royong antarwarga.</p>
+          <button>Pilih</button>
+        </div>
+
+        <div class="card">
+          <img src="https://via.placeholder.com/120" alt="Alvaro">
+          <h4>Alvaro</h4>
+          <p>Visi: Menciptakan lingkungan RT yang bersih dan harmonis.</p>
+          <button>Pilih</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- HASIL SUARA -->
+    <div id="hasil" class="section">
+      <h3>Has

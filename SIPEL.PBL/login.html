@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login - Voting App</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body class="d-flex align-items-center" style="min-height:100vh;">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-5">
+        <div class="page-card p-4">
+          <h4>Login</h4>
+          <p class="text-muted small">Masuk untuk melanjutkan ke dashboard.</p>
+
+          <form onsubmit="event.preventDefault(); window.location='dashboard.html'">
+            <div class="mb-3">
+              <label class="form-label">Email atau NIK</label>
+              <input required type="text" class="form-control" placeholder="email atau NIK">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input required type="password" class="form-control" placeholder="password">
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="register.html">Buat akun baru</a>
+              <button class="btn btn-primary" type="submit">Login</button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

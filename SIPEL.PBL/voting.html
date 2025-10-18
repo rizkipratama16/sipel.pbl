@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Voting - Voting App</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body>
+<div class="container py-4">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h4>Pilih Kandidat</h4>
+    <a class="btn btn-outline-secondary btn-sm" href="dashboard.html">Kembali</a>
+  </div>
+
+  <div class="row g-3">
+    <!-- Kandidat loop (contoh 3) -->
+    <div class="col-md-4">
+      <div class="page-card p-3 candidate-card">
+        <div class="text-center mb-2">
+          <img src="assets/img/candidate1.png" alt="" class="rounded-circle" width="100">
+        </div>
+        <h6 class="text-center">Rizki Santoso</h6>
+        <p class="text-muted small text-center">Visi: Transparansi, Pelayanan.</p>
+        <div class="d-grid">
+          <button class="btn btn-outline-primary" onclick="selectCandidate('Rizki Santoso')">Pilih</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="page-card p-3 candidate-card">
+        <div class="text-center mb-2">
+          <img src="assets/img/candidate2.png" alt="" class="rounded-circle" width="100">
+        </div>
+        <h6 class="text-center">Siti Nurhayati</h6>
+        <p class="text-muted small text-center">Visi: Kesejahteraan & Kebersamaan.</p>
+        <div class="d-grid">
+          <button class="btn btn-outline-primary" onclick="selectCandidate('Siti Nurhayati')">Pilih</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="page-card p-3 candidate-card">
+        <div class="text-center mb-2">
+          <img src="assets/img/candidate3.png" alt="" class="rounded-circle" width="100">
+        </div>
+        <h6 class="text-center">Budi Prasetyo</h6>
+        <p class="text-muted small text-center">Visi: Infrastruktur & Keamanan.</p>
+        <div class="d-grid">
+          <button class="btn btn-outline-primary" onclick="selectCandidate('Budi Prasetyo')">Pilih</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-4 page-card p-3">
+    <h6>Konfirmasi Pilihan</h6>
+    <p id="choiceText" class="text-muted small">Belum memilih.</p>
+    <div>
+      <button id="confirmBtn" class="btn btn-primary" disabled onclick="submitVote()">Konfirmasi dan Kirim</button>
+    </div>
+  </div>
+</div>
+
+<script>
+let selected = null;
+function selectCandidate(name){
+  selected = name;
+  document.getElementById('choiceText').innerText = 'Kamu memilih: ' + name;
+  document.getElementById('confirmBtn').disabled = false;
+}
+function submitVote(){
+  if(!selected) return alert('Pilih kandidat dulu bro');
+  // Simulasi kirim -> ke results.html
+  alert('Vote terkirim: ' + selected);
+  window.location = 'results.html';
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

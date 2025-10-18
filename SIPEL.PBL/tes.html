@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard Admin - SipeL</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f6f8;
+    }
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    .sidebar {
+      width: 220px;
+      height: 100vh;
+      background-color: #fff;
+      position: fixed;
+      border-right: 1px solid #ddd;
+      padding-top: 20px;
+    }
+    .sidebar a {
+      display: block;
+      padding: 10px 20px;
+      color: #333;
+      text-decoration: none;
+    }
+    .sidebar a:hover {
+      background-color: #007bff;
+      color: white;
+    }
+    .content {
+      margin-left: 240px;
+      padding: 20px;
+    }
+    .card {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Dashboard Admin - SipeL</h2>
+  </header>
+  
+  <div class="sidebar">
+    <a href="#">📊 Statistik Pemilihan</a>
+    <a href="#">👥 Data Warga</a>
+    <a href="#">🗳️ Data Calon</a>
+    <a href="#">📈 Hasil Pemilihan</a>
+    <a href="#">🚪 Logout</a>
+  </div>
+
+  <div class="content">
+    <h3>Selamat Datang, Admin!</h3>
+    <div class="card">
+      <h4>Total Warga Terdaftar: 120</h4>
+    </div>
+    <div class="card">
+      <h4>Total Calon RT: 5</h4>
+    </div>
+    <div class="card">
+      <h4>Suara Masuk: 87</h4>
+    </div>
+  </div>
+</body>
+</html>
